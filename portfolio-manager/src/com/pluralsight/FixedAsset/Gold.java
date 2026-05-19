@@ -3,7 +3,7 @@ package com.pluralsight.FixedAsset;
 public class Gold extends FixedAsset
 {
     // Variables
-    private double weight;
+    protected double weight;
 
     // Constructor
     public Gold(String name, double weight)
@@ -15,8 +15,7 @@ public class Gold extends FixedAsset
     @Override
     public double getValue()
     {
-
+        return weight * 200;
     }
-
 }
 

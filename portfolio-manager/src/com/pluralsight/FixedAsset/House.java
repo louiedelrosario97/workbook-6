@@ -3,9 +3,9 @@ package com.pluralsight.FixedAsset;
 public class House extends FixedAsset
 {
     // Variables
-    private int yearBuilt;
-    private int squareFeet;
-    private int bedrooms;
+    private final int yearBuilt;
+    protected int squareFeet;
+    protected int bedrooms;
 
     // Constructor
     public House(int yearBuilt, int squareFeet, int bedrooms)
@@ -21,6 +21,7 @@ public class House extends FixedAsset
     public int getSquareFeet() { return squareFeet; }
     public int getBedrooms() { return bedrooms; }
 
+    // FixedAsset-Inherited methods
     @Override
     public double getValue()
     {

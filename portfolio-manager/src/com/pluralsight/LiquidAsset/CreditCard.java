@@ -5,16 +5,16 @@ import com.pluralsight.Interface.IValuable;
 public class CreditCard implements IValuable
 {
     // Variables
-    String name;
-    String accountNumber;
-    double balance;
+    String creditorName;
+    String cardNumber;
+    double creditCardBalance;
 
     // Constructors
-    public CreditCard(String name, String accountNumber, double balance)
+    public CreditCard(String name, String accountNumber, double creditCardBalance)
     {
-        this.name = name;
-        this.accountNumber = accountNumber;
-        this.balance = balance;
+        this.creditorName = name;
+        this.cardNumber = accountNumber;
+        this.creditCardBalance = creditCardBalance;
     }
 
     // Methods
