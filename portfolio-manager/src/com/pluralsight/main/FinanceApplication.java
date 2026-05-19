@@ -1,7 +1,7 @@
 package com.pluralsight.main;
 
 import com.pluralsight.Interface.IValuable;
-import com.pluralsight.LiquidAsset.BankAccount;
+import com.pluralsight.Assets.Liquid.BankAccount;
 
 public class FinanceApplication
 {

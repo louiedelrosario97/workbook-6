@@ -1,4 +1,4 @@
-package com.pluralsight.FixedAsset;
+package com.pluralsight.Assets.Fixed;
 
 public class Gold extends FixedAsset
 {

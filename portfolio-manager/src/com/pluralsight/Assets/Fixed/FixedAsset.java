@@ -1,4 +1,4 @@
-package com.pluralsight.FixedAsset;
+package com.pluralsight.Assets.Fixed;
 
 import com.pluralsight.Interface.IValuable;
 

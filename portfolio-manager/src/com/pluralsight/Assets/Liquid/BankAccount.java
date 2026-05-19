@@ -1,4 +1,4 @@
-package com.pluralsight.LiquidAsset;
+package com.pluralsight.Assets.Liquid;
 
 import com.pluralsight.Interface.IValuable;
 
