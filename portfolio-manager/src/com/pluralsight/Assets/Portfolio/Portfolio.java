@@ -28,19 +28,32 @@ public class Portfolio
     }
 
     // Derived Getters
-    public double getValue() //
+    public double getValue() // For each loop IValuable objects in
     {
-
+        double totalValue = 0;
+        for (IValuable asset : assets) // getValue() of 'assets' List
+        {
+            totalValue += asset.getValue();
+        }
+        return totalValue;
     }
 
     public IValuable getMostValuable ()
     {
+        for (IValuable asset: assets)
+        {
 
+        }
+        return mostValuable;
     }
 
     public IValuable getLeastValuable()
     {
+        for (IValuable asset: assets)
+        {
 
+        }
+        return leastValuable;
     }
 
 }
