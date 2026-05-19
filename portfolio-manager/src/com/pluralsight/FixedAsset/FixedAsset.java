@@ -11,9 +11,8 @@ public abstract class FixedAsset implements IValuable
     // Constructors
     public FixedAsset(String name, double value) {}
 
-    public double getValue()
-    {
-
-    }
+    // Implemented method
+    @Override
+    public double getValue() { return marketValue; }
 }
 
