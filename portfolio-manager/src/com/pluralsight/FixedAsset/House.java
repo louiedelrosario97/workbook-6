@@ -16,10 +16,15 @@ public class House extends FixedAsset
         this.bedrooms = bedrooms;
     }
 
+    // Getters
+    public int getYearBuilt() { return yearBuilt; }
+    public int getSquareFeet() { return squareFeet; }
+    public int getBedrooms() { return bedrooms; }
+
     @Override
     public double getValue()
     {
-
+        return squareFeet * 2000;
     }
 }
 

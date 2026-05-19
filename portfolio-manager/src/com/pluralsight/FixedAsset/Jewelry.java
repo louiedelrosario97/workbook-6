@@ -12,7 +12,14 @@ public class Jewelry extends FixedAsset
       this.karat = karat;
    }
 
+   // Getters
+   public double getKarat() { return karat; }
+
+   // FixedAsset-Inherited methods
    @Override
-   public double getValue() { }
+   public double getValue()
+   {
+      return getKarat() * 100;
+   }
 }
 
