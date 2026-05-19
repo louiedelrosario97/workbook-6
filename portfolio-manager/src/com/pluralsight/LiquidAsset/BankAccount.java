@@ -6,11 +6,11 @@ public class BankAccount implements IValuable
 {
     // Variables
     String name;
-    String accountNumber;
+    int accountNumber;
     double balance;
 
     // Constructor
-    public BankAccount(String name, String accountNumber, double balance)
+    public BankAccount(String name, int accountNumber, double balance)
     {
         this.name = name;
         this.accountNumber = accountNumber;
@@ -18,19 +18,21 @@ public class BankAccount implements IValuable
     }
 
     // Methods
-    public void deposit(double amount)
+    public double deposit(double amount)
     {
-
+        balance += amount;
+        return balance;
     }
-    public void withdraw(double amount)
+    public double withdraw(double amount)
     {
-
+        balance -= amount;
+        return balance;
     }
 
     // Implemented methods
     public double getValue()
     {
-
+        return balance;
     }
 }
 

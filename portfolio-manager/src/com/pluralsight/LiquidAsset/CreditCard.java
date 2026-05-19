@@ -24,9 +24,10 @@ public class CreditCard implements IValuable
         return creditCardBalance;
     }
 
-    public double pay(double amount) // The pay amount needs to come out of BankAccount
+    public double pay(double payAmount) // The pay amount needs to come out of BankAccount (optional logic, do later)
     {
-
+        creditCardBalance += payAmount;
+        return creditCardBalance;
     }
 
     // IValuable-Implemented methods
