@@ -1,0 +1,22 @@
+package com.pluralsight.FixedAsset;
+
+public class Gold extends FixedAsset
+{
+    // Variables
+    private double weight;
+
+    // Constructor
+    public Gold(String name, double weight)
+    {
+        super (name, 0.0);
+        this.weight = weight;
+    }
+
+    @Override
+    public double getValue()
+    {
+
+    }
+
+}
+
