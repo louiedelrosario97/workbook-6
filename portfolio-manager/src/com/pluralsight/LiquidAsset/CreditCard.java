@@ -10,21 +10,29 @@ public class CreditCard implements IValuable
     double creditCardBalance;
 
     // Constructors
-    public CreditCard(String name, String accountNumber, double creditCardBalance)
+    public CreditCard(String creditorName, String cardNumber, double creditCardBalance)
     {
-        this.creditorName = name;
-        this.cardNumber = accountNumber;
+        this.creditorName = creditorName;
+        this.cardNumber = cardNumber;
         this.creditCardBalance = creditCardBalance;
     }
 
     // Methods
-    public charge(double amount){}
-    public pay(double amount) {}
+    public double charge(double chargeAmount)
+    {
+        creditCardBalance -= chargeAmount;
+        return creditCardBalance;
+    }
 
-    // Implemented methods
-    public double getValue()
+    public double pay(double amount) // The pay amount needs to come out of BankAccount
     {
 
+    }
+
+    // IValuable-Implemented methods
+    public double getValue()
+    {
+        return creditCardBalance;
     }
 }
 
