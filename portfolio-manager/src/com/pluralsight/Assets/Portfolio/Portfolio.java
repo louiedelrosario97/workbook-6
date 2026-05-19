@@ -11,7 +11,7 @@ public class Portfolio
     String name;
     String owner;
 
-    // List of 'assets'
+    // List of IValuable objects. The List is called 'assets'.
     List<IValuable> assets = new ArrayList<>();
 
     // Constructor
@@ -21,8 +21,14 @@ public class Portfolio
         this.owner = owner;
     }
 
+    // Methods
+    public void add(IValuable asset) // This lets us add objects that implement IValuable to the 'assets' List.
+    {
+        assets.add(asset);
+    }
+
     // Derived Getters
-    public double getValue()
+    public double getValue() //
     {
 
     }
