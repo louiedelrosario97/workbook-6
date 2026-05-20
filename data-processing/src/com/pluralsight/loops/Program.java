@@ -55,13 +55,13 @@ public class Program
         {
             for(int i = 0; i < filterSeach.size(); i++)
             {
-                String filter = filterSearch.get(i);
-                System.out.println(filter.getFirstName() + "" + filter.getLastName());
+                Person filter = filterSearch.get(i);
+                System.out.println(filter.getFirstName() + " " + filter.getLastName());
             }
         }
         else
         {
-            System.out.println("Search entry does not match our records. System shutting down... (you broke the application you absolute GOOF.")
+            System.out.println("Search entry does not match our records. System shutting down... (you broke the application you absolute GOOF.");
         }
     }
 
