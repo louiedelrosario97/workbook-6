@@ -21,20 +21,38 @@ public class Program
         Person ging = new Person("Ging", "Freecss", 32);
         Person alluka = new Person("Alluka", "Zoldyck", 11);
 
-        // Creating an 'Person' Arraylist and calling the list 'name'
-        ArrayList<Person> name = new ArrayList<>();
+        // Creating an 'Person' Arraylist and calling the list 'person'
+        ArrayList<Person> person = new ArrayList<>();
 
-        // Manually adding the 'Person' objects to our 'name' ArrayList
-        name.add(gon);
-        name.add(killua);
-        name.add(kurapika);
-        name.add(leorio);
-        name.add(hisoka);
-        name.add(illumi);
-        name.add(chrollo);
-        name.add(biscuit);
-        name.add(ging);
-        name.add(alluka);
+        // Manually adding the 'Person' objects to our 'person' ArrayList
+        person.add(gon);
+        person.add(killua);
+        person.add(kurapika);
+        person.add(leorio);
+        person.add(hisoka);
+        person.add(illumi);
+        person.add(chrollo);
+        person.add(biscuit);
+        person.add(ging);
+        person.add(alluka);
+
+        // Prompt user input and then loop that input to filter into a new List. Then display
+        Scanner scanner = new Scanner(Sytem.in);
+        System.out.println("Search name: ");
+        String search = scanner.nextLine();
+
+        ArrayList<Person> filterSearch = new ArrayList<>();
+
+        for (i = 0; i < person.size(); i++)
+        {
+            Person p = person.get(i);
+            if (p.getFirstName().equalsIgnoreCase(search) || p.getLastName().equalsIgnoreCase(search))
+            {
+                filterSearch.add(p);
+            }
+
+
+        }
     }
 
     }
