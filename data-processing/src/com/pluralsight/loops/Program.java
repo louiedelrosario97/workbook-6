@@ -36,9 +36,11 @@ public class Program
 
         // Prompt user input and then loop that input to filter into a new List. Then display
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Search name: ");
+
+        System.out.print("Search name: ");
         String search = scanner.nextLine();
 
+        // Creating an ArrayList that will contain the elements that pass through the for-if loop
         ArrayList<Person> filterSearch = new ArrayList<>();
 
         for (int i = 0; i < person.size(); i++)
@@ -49,21 +51,29 @@ public class Program
                 filterSearch.add(p);
             }
         }
-
+    // -----------------------------------------------------------------------------------------------------------------
         // Display filtered 'person' list
         if (!filterSearch.isEmpty())
         {
-            for(int i = 0; i < filterSeach.size(); i++)
+            for(int i = 0; i < filterSearch.size(); i++)
             {
                 Person filter = filterSearch.get(i);
+                System.out.println("Filter Results:");
                 System.out.println(filter.getFirstName() + " " + filter.getLastName());
             }
         }
         else
         {
-            System.out.println("Search entry does not match our records. System shutting down... (you broke the application you absolute GOOF.");
+            System.out.println("Search entry does not match our records. System shutting down... (you broke the application you absolute GOOF.)");
         }
-    }
+
+//        Calculate the average age of all people in the original list and display it.
+//        Display the age of the oldest person in the list.
+//        Display the age of the youngest person in the list.
+
+        // Calculate average age
+
 
     }
+}
 
