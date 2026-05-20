@@ -43,7 +43,7 @@ public class Program
 
         ArrayList<Person> filterSearch = new ArrayList<>();
 
-        for (i = 0; i < person.size(); i++)
+        for (int i = 0; i < person.size(); i++)
         {
             Person p = person.get(i);
             if (p.getFirstName().equalsIgnoreCase(search) || p.getLastName().equalsIgnoreCase(search))
