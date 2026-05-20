@@ -51,7 +51,7 @@ public class Program
         }
 
         // Display filtered 'person' list
-        if (filterSeach.size() != 0)
+        if (!filterSearch.isEmpty())
         {
             for(int i = 0; i < filterSeach.size(); i++)
             {
