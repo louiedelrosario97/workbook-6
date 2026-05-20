@@ -5,8 +5,9 @@ import java.util.Scanner;
 
 public class Program
 {
-    public static void main(String[] args)
-    {
+//  [ STEP 1 ]
+//  In your main method create a list of at least 10 people.
+    public static void main(String[] args) {
         // Manually creating instances of 'Person' class.
         Person gon = new Person("Gon", "Freecss", 12);
         Person killua = new Person("Killua", "Zoldyck", 12);
@@ -19,7 +20,7 @@ public class Program
         Person ging = new Person("Ging", "Freecss", 32);
         Person alluka = new Person("Alluka", "Zoldyck", 11);
 
-        // Creating an 'Person' Arraylist and calling the list 'person'
+        // Creating a 'Person' Arraylist and calling the list 'person'
         ArrayList<Person> person = new ArrayList<>();
 
         // Manually adding the 'Person' objects to our 'person' ArrayList
@@ -33,6 +34,10 @@ public class Program
         person.add(biscuit);
         person.add(ging);
         person.add(alluka);
+
+//      [ STEP 2 ]
+//      Prompt the user for a name to search (first or last).
+//      Using a for loop, create a new List of people whose name was a match, display the names of the people in that list
 
         // Prompt user input and then loop that input to filter into a new List. Then display
         Scanner scanner = new Scanner(System.in);
@@ -66,14 +71,42 @@ public class Program
         {
             System.out.println("Search entry does not match our records. System shutting down... (you broke the application you absolute GOOF.)");
         }
-
+//        [ STEP 3 ]
 //        Calculate the average age of all people in the original list and display it.
 //        Display the age of the oldest person in the list.
 //        Display the age of the youngest person in the list.
 
-        // Calculate average age
+        // Calculate average age [ Get each age of the elements in 'person' and divide it by .size() ]
+        int allAges = 0;
 
+        for (int i = 0; i < person.size(); i++)
+        {
+            allAges += person.get(i).getAge();
+        }
+            int average = allAges / person.size();
+            System.out.println("The average age is: " + average );
 
+        // Display oldest age
+        int oldestAge = person.get(0).getAge();
+        for (int i = 0; i < person.size(); i++)
+        {
+            if (person.get(i).getAge() > oldestAge)
+            {
+                oldestAge = person.get(i).getAge();
+            }
+        }
+        System.out.println("The oldest age is: " + oldestAge);
+
+        // Display youngest age
+        int youngestAge = person.get(0).getAge();
+        for (int i = 0; i < person.size(); i++)
+        {
+            if (person.get(i).getAge() < youngestAge)
+            {
+                youngestAge = person.get(i).getAge();
+            }
+        }
+        System.out.println("The youngest age is: " + youngestAge);
     }
 }
 
