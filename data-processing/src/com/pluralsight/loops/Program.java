@@ -7,8 +7,6 @@ public class Program
 {
     public static void main(String[] args)
     {
-
-
         // Manually creating instances of 'Person' class.
         Person gon = new Person("Gon", "Freecss", 12);
         Person killua = new Person("Killua", "Zoldyck", 12);
@@ -37,7 +35,7 @@ public class Program
         person.add(alluka);
 
         // Prompt user input and then loop that input to filter into a new List. Then display
-        Scanner scanner = new Scanner(Sytem.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Search name: ");
         String search = scanner.nextLine();
 
@@ -50,8 +48,20 @@ public class Program
             {
                 filterSearch.add(p);
             }
+        }
 
-
+        // Display filtered 'person' list
+        if (filterSeach.size() != 0)
+        {
+            for(int i = 0; i < filterSeach.size(); i++)
+            {
+                String filter = filterSearch.get(i);
+                System.out.println(filter.getFirstName() + "" + filter.getLastName());
+            }
+        }
+        else
+        {
+            System.out.println("Search entry does not match our records. System shutting down... (you broke the application you absolute GOOF.")
         }
     }
 
