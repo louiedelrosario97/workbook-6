@@ -44,10 +44,15 @@ public class Program
         System.out.print("Search name: ");
         String search = scanner.nextLine();
 
+        // Filters and collects search
         ArrayList<Person> filter = person.stream()
-                .filter(per -> per.getFirstName().equalsIgnoreCase(search)|| per.getLastName().equalsIgnoreCase(search))
-                .collect(Collectors.toCollection(ArrayList::new));
+            .filter(per -> per.getFirstName().toLowerCase().contains(search.toLowerCase())
+                                    || per.getLastName().toLowerCase().contains(search.toLowerCase())
+            .collect(Collectors.toCollection(ArrayList::new));
 
+        for (Person per : filter) {
+            System.out.println(per.getFirstName() + " " + per.getLastName());
+        }
     }
 }
 
